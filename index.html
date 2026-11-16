@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!-- Static version of the Chess Club at CSUSB website (GitHub Pages).
+     To add or change events/news, edit the sections marked EVENTS and NEWS below. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess Club at CSUSB | Coyote Chess Club</title>
+  <meta name="description" content="The Chess Club at CSUSB: casual play, lessons, workshops and tournaments for students of every skill level.">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ========== HEADER / NAVIGATION ========== -->
+<header class="site-header" id="top">
+  <div class="container nav-bar">
+    <a href="#home" class="brand">
+      <img src="img/logo-512.png" alt="Chess Club at CSUSB logo" width="44" height="44">
+      <span>Chess Club <small>at CSUSB</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav" class="main-nav" aria-label="Main">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#events">Events</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#join" class="btn btn-small">Join the Club</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ========== HOME / HERO ========== -->
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">Coyote Chess Club</p>
+      <h1>Your next move starts here.</h1>
+      <p class="lead">The Chess Club at CSUSB is a welcoming place to play, learn and compete. Whether you have never touched a chessboard or you play every day, there is a seat at our table for you.</p>
+      <div class="hero-actions">
+        <a href="#join" class="btn">Join the Club</a>
+        <a href="#events" class="btn btn-outline">See Upcoming Events</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="img/logo.png" alt="Chess Club at CSUSB shield logo with a coyote knight">
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY JOIN ========== -->
+<section class="section why">
+  <div class="container">
+    <h2 class="section-title">Why Join?</h2>
+    <div class="card-grid three">
+      <article class="card feature">
+        <div class="feature-icon" aria-hidden="true">♞</div>
+        <h3>All Levels Welcome</h3>
+        <p>Beginners learn the rules from scratch; experienced players find strong opponents.</p>
+      </article>
+      <article class="card feature">
+        <div class="feature-icon" aria-hidden="true">♜</div>
+        <h3>Equipment Provided</h3>
+        <p>We supply boards, pieces and chess clocks. Just bring yourself and a friend.</p>
+      </article>
+      <article class="card feature">
+        <div class="feature-icon" aria-hidden="true">♛</div>
+        <h3>Community &amp; Competition</h3>
+        <p>Casual games, workshops and tournaments help you meet people and sharpen your skills.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section id="about" class="section alt">
+  <div class="container about-grid">
+    <div>
+      <h2 class="section-title left">About the Club</h2>
+      <p>The Chess Club at CSUSB brings together students who enjoy the game, from complete beginners to tournament players. The club had been inactive for a while, so our officers went through the process of reactivating it and collected the university's chess sets and clocks. Today we meet regularly to play, learn and have fun.</p>
+      <p><strong>Our mission</strong> is to build a friendly chess community on campus, teach the game to anyone who wants to learn, and give experienced players a place to compete.</p>
+      <div class="academy">
+        <span class="badge">Coming Spring 2027</span>
+        <h3>Chess Academy</h3>
+        <p>A two-hour training session every Monday where experienced members teach beginners, starting from the basic rules. No experience needed.</p>
+      </div>
+    </div>
+    <div class="photo-stack">
+      <img src="img/meeting-2.jpg" alt="Two club members playing chess at a club meeting" loading="lazy">
+      <img src="img/meeting-5.jpg" alt="Club members during a game with a chess clock on the table" loading="lazy">
+    </div>
+  </div>
+
+  <div class="container">
+    <h3 class="sub-title">Club Officers</h3>
+    <div class="card-grid three officers">
+      <article class="card officer">
+        <div class="avatar" aria-hidden="true">♔</div>
+        <h4>Musa Kamali</h4>
+        <p>President</p>
+      </article>
+      <article class="card officer">
+        <div class="avatar" aria-hidden="true">♕</div>
+        <h4>[Vice President Name]</h4>
+        <p>Vice President</p>
+      </article>
+      <article class="card officer">
+        <div class="avatar" aria-hidden="true">♗</div>
+        <h4>[Faculty Advisor Name]</h4>
+        <p>Faculty Advisor</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EVENTS (from MySQL) ========== -->
+<section id="events" class="section">
+  <div class="container">
+    <h2 class="section-title">Events &amp; Tournaments</h2>
+    <p class="section-intro">Casual meetings, lessons, workshops and tournaments. Everyone is welcome; just show up.</p>
+
+          <div class="filter-bar" role="group" aria-label="Filter events by type">
+        <button class="chip active" data-filter="all">All</button>
+                  <button class="chip" data-filter="Meeting">Meeting</button>
+                  <button class="chip" data-filter="Workshop">Workshop</button>
+                  <button class="chip" data-filter="Tournament">Tournament</button>
+                  <button class="chip" data-filter="Lesson">Lesson</button>
+              </div>
+      <div class="card-grid events-list">
+                  <article class="card event" data-type="Meeting" data-date="2026-11-23">
+            <div class="event-date">
+              <span class="month">Nov</span>
+              <span class="day">23</span>
+            </div>
+            <div class="event-body">
+              <span class="tag tag-meeting">Meeting</span>
+              <h3>Casual Play Night</h3>
+              <p class="meta">Mon, Nov 23 · 2:00 PM – 4:00 PM</p>
+              <p class="meta">📍 CSUSB Campus (room TBA)</p>
+              <p>Drop in and play a few games. Boards, pieces and clocks are provided. All skill levels are welcome.</p>
+            </div>
+          </article>
+                  <article class="card event" data-type="Workshop" data-date="2026-12-01">
+            <div class="event-date">
+              <span class="month">Dec</span>
+              <span class="day">1</span>
+            </div>
+            <div class="event-body">
+              <span class="tag tag-workshop">Workshop</span>
+              <h3>Opening Principles Workshop</h3>
+              <p class="meta">Tue, Dec 1 · 2:00 PM – 3:30 PM</p>
+              <p class="meta">📍 CSUSB Campus (room TBA)</p>
+              <p>Learn the three golden rules of the opening: control the center, develop your pieces and castle early.</p>
+            </div>
+          </article>
+                  <article class="card event" data-type="Tournament" data-date="2026-12-07">
+            <div class="event-date">
+              <span class="month">Dec</span>
+              <span class="day">7</span>
+            </div>
+            <div class="event-body">
+              <span class="tag tag-tournament">Tournament</span>
+              <h3>End-of-Semester Blitz Tournament</h3>
+              <p class="meta">Mon, Dec 7 · 1:00 PM – 4:00 PM</p>
+              <p class="meta">📍 CSUSB Campus (room TBA)</p>
+              <p>Five rounds of 5-minute blitz games. Sign up at the door. Prizes for the top three players.</p>
+            </div>
+          </article>
+                  <article class="card event" data-type="Lesson" data-date="2027-01-25">
+            <div class="event-date">
+              <span class="month">Jan</span>
+              <span class="day">25</span>
+            </div>
+            <div class="event-body">
+              <span class="tag tag-lesson">Lesson</span>
+              <h3>Chess Academy - First Lesson</h3>
+              <p class="meta">Mon, Jan 25 · 2:00 PM – 4:00 PM</p>
+              <p class="meta">📍 CSUSB Campus (room TBA)</p>
+              <p>The first Chess Academy session of Spring 2027. Experienced members teach beginners the rules from the very beginning.</p>
+            </div>
+          </article>
+              </div>
+      </div>
+</section>
+
+<!-- ========== NEWS (from MySQL) ========== -->
+<section id="news" class="section alt">
+  <div class="container">
+    <h2 class="section-title">News &amp; Announcements</h2>
+          <div class="card-grid three">
+                  <article class="card news-item">
+            <time datetime="2026-11-16">November 16, 2026</time>
+            <h3>New Club Website and Email</h3>
+            <p>Our new website is live. You can now contact the club at info@coyotechessclub.org and request membership online.</p>
+          </article>
+                  <article class="card news-item">
+            <time datetime="2026-11-10">November 10, 2026</time>
+            <h3>Chess Academy Starts in Spring 2027</h3>
+            <p>Next semester we are launching Chess Academy: a two-hour training session every Monday where experienced players teach beginners from the basic rules. No experience needed.</p>
+          </article>
+                  <article class="card news-item">
+            <time datetime="2026-11-05">November 5, 2026</time>
+            <h3>The Chess Club Is Back!</h3>
+            <p>After a period of inactivity, the Chess Club at CSUSB has been officially reactivated. We collected the school&#039;s chess sets and clocks, and we are ready to play. Come to a meeting and say hello.</p>
+          </article>
+              </div>
+      </div>
+</section>
+
+<!-- ========== JOIN THE CLUB (form -> Formspree -> club Gmail) ========== -->
+<section id="join" class="section join">
+  <div class="container join-grid">
+    <div class="join-photo">
+      <img src="img/meeting-6.jpg" alt="Two smiling club members at a chessboard">
+    </div>
+    <div>
+      <h2 class="section-title left">Join the Club</h2>
+      <p>Fill out the form and a club officer will contact you with the next meeting details. Membership is free.</p>
+
+      <form id="join-form" class="join-form" action="https://formspree.io/f/YOUR_FORM_ID" method="post" novalidate>
+        <div class="field">
+          <label for="full_name">Full name *</label>
+          <input type="text" id="full_name" name="full_name" maxlength="100" autocomplete="name" required>
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="field">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" maxlength="150" autocomplete="email" placeholder="you@coyote.csusb.edu" required>
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="skill_level">Chess experience *</label>
+            <select id="skill_level" name="skill_level" required>
+              <option value="">Choose one</option>
+              <option>Beginner</option>
+              <option>Intermediate</option>
+              <option>Advanced</option>
+            </select>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="preferred_game">Preferred game *</label>
+            <select id="preferred_game" name="preferred_game" required>
+              <option value="">Choose one</option>
+              <option>Casual</option>
+              <option>Rapid</option>
+              <option>Blitz</option>
+              <option>Classical</option>
+            </select>
+            <small class="error" aria-live="polite"></small>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Anything you'd like us to know? <span class="optional">(optional)</span></label>
+          <textarea id="message" name="message" rows="3" maxlength="500"></textarea>
+          <small class="counter"><span id="msg-count">0</span>/500</small>
+        </div>
+        <!-- Hidden field to catch spam bots: real users leave it empty -->
+        <div class="hp" aria-hidden="true">
+          <label for="_gotcha">Website</label>
+          <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_subject" value="New membership request - Chess Club at CSUSB">
+        </div>
+        <button type="submit" class="btn btn-block">Send Membership Request</button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        <p class="privacy">We only use your name and email to contact you about the club. We never share them.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section id="contact" class="section alt">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="card-grid three contact-cards">
+      <article class="card">
+        <h3>Email</h3>
+        <p><a href="mailto:info@coyotechessclub.org">info@coyotechessclub.org</a></p>
+      </article>
+      <article class="card">
+        <h3>Where We Meet</h3>
+        <p>California State University, San Bernardino<br>5500 University Pkwy, San Bernardino, CA 92407<br><em>Room announced with each event</em></p>
+      </article>
+      <article class="card">
+        <h3>Follow Us</h3>
+        <p>Instagram: <em>[coming soon]</em><br>Coyote Connection: <em>[link coming soon]</em></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="img/logo-512.png" alt="" width="56" height="56">
+      <div>
+        <strong>Chess Club at CSUSB</strong>
+        <p>Play. Learn. Compete.</p>
+      </div>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#about">About</a>
+      <a href="#events">Events</a>
+      <a href="#news">News</a>
+      <a href="#join">Join</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="fine-print">© 2026 Chess Club at CSUSB. A student organization; not an official publication of California State University, San Bernardino.</p>
+  </div>
+</footer>
+
+<a href="#top" class="to-top" aria-label="Back to top">↑</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
