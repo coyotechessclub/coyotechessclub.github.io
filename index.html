@@ -30,6 +30,7 @@
       <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
       <a href="#events">Events</a>
+      <a href="#online">Online</a>
       <a href="#news">News</a>
       <a href="#contact">Contact</a>
       <a href="#join" class="btn btn-small">Join the Club</a>
@@ -102,7 +103,7 @@
 
   <div class="container">
     <h3 class="sub-title">Club Officers</h3>
-    <div class="card-grid three officers">
+    <div class="card-grid four officers">
       <article class="card officer">
         <div class="avatar" aria-hidden="true">♔</div>
         <h4>Musa Kamali</h4>
@@ -110,12 +111,17 @@
       </article>
       <article class="card officer">
         <div class="avatar" aria-hidden="true">♕</div>
-        <h4>[Vice President Name]</h4>
+        <h4>Dhruvil Sanjaybhai Kumbhani</h4>
         <p>Vice President</p>
       </article>
       <article class="card officer">
+        <div class="avatar" aria-hidden="true">♖</div>
+        <h4>Erick Covarrubias</h4>
+        <p>Treasurer</p>
+      </article>
+      <article class="card officer">
         <div class="avatar" aria-hidden="true">♗</div>
-        <h4>[Faculty Advisor Name]</h4>
+        <h4>Dr. Ahmed Elnoshokaty</h4>
         <p>Faculty Advisor</p>
       </article>
     </div>
@@ -190,6 +196,33 @@
           </article>
               </div>
       </div>
+</section>
+
+<!-- ========== PLAY ONLINE (Chess.com Published-Data API) ========== -->
+<section id="online" class="section online">
+  <div class="container online-grid">
+    <div>
+      <h2 class="section-title left">Play Online</h2>
+      <p>Can't make it to a meeting? Join our club on Chess.com to play members online, take part in club matches and stay in touch between meetings.</p>
+      <div class="card club-card" id="chesscom-club" data-club="chess-club-at-csusb">
+        <img src="img/logo-512.png" alt="" width="64" height="64">
+        <div>
+          <h3 id="cc-name">Chess Club at CSUSB</h3>
+          <p class="meta"><span id="cc-members">Our club</span> on Chess.com</p>
+        </div>
+      </div>
+      <div id="cc-member-list" class="member-list" hidden>
+        <h4>Members</h4>
+        <ul></ul>
+      </div>
+      <a class="btn" href="https://www.chess.com/club/chess-club-at-csusb" target="_blank" rel="noopener">Join us on Chess.com</a>
+      <p class="privacy">Club data is loaded live from the Chess.com Published-Data API.</p>
+    </div>
+    <div class="puzzle">
+      <h3>Daily Puzzle</h3>
+      <iframe src="https://www.chess.com/daily_puzzle" title="Chess.com daily puzzle" loading="lazy"></iframe>
+    </div>
+  </div>
 </section>
 
 <!-- ========== NEWS (from MySQL) ========== -->
