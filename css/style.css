@@ -122,6 +122,7 @@ p { margin: 0 0 1em; }
 /* ---------- Cards ---------- */
 .card-grid { display: grid; gap: 1.5rem; }
 .card-grid.three { grid-template-columns: repeat(3, 1fr); }
+.card-grid.four { grid-template-columns: repeat(4, 1fr); }
 .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; box-shadow: var(--shadow); }
 .card p:last-child { margin-bottom: 0; }
 
@@ -155,6 +156,20 @@ p { margin: 0 0 1em; }
 .tag-tournament { background: #fde8e8; color: #9b1c1c; }
 .tag-workshop { background: #fff4d6; color: #8a5a00; }
 .tag-lesson { background: #e3f6e8; color: #1f7a3d; }
+
+/* ---------- Play Online (Chess.com) ---------- */
+.online-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: start; }
+.club-card { display: flex; align-items: center; gap: 1rem; margin: 1.4rem 0; }
+.club-card img { flex: 0 0 64px; border-radius: 10px; }
+.club-card h3 { margin: 0 0 .2rem; }
+.club-card .meta { margin: 0; }
+.member-list { margin-bottom: 1.4rem; }
+.member-list h4 { margin-bottom: .6rem; }
+.member-list ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.member-list a { display: inline-block; padding: .3em .85em; border-radius: 999px; background: var(--blue-light); color: var(--blue-dark); font-weight: 600; text-decoration: none; font-size: .95rem; }
+.member-list a:hover { background: var(--blue); color: #fff; }
+.puzzle { text-align: center; }
+.puzzle iframe { width: 400px; max-width: 100%; height: 560px; border: 0; border-radius: var(--radius); box-shadow: var(--shadow); background: #fff; }
 
 /* ---------- News ---------- */
 .news-item time { display: block; color: var(--blue); font-weight: 700; font-size: .9rem; margin-bottom: .4rem; }
@@ -206,13 +221,13 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .hero-grid, .about-grid, .join-grid { grid-template-columns: 1fr; }
+  .hero-grid, .about-grid, .join-grid, .online-grid { grid-template-columns: 1fr; }
   .hero { padding: 3.5rem 0 4rem; text-align: center; }
   .lead { margin-left: auto; margin-right: auto; }
   .hero-actions { justify-content: center; }
   .hero-image { order: -1; }
   .hero-image img { width: 220px; }
-  .card-grid.three, .events-list { grid-template-columns: 1fr 1fr; }
+  .card-grid.three, .card-grid.four, .events-list { grid-template-columns: 1fr 1fr; }
   .join-photo { order: 2; }
 }
 
@@ -231,7 +246,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 }
 
 @media (max-width: 600px) {
-  .card-grid.three, .events-list, .field-row { grid-template-columns: 1fr; }
+  .card-grid.three, .card-grid.four, .events-list, .field-row { grid-template-columns: 1fr; }
   .section { padding: 3.2rem 0; }
   .footer-grid { grid-template-columns: 1fr; }
   .event { flex-direction: column; }
