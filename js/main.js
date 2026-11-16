@@ -69,6 +69,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ---------- 5) Chess.com club info (Published-Data API, no key needed) ----------
+  const clubBox = document.getElementById('chesscom-club');
+  if (clubBox) {
+    const clubId = clubBox.dataset.club;
+    const api = 'https://api.chess.com/pub/club/' + clubId;
+
+    fetch(api)
+      .then(r => (r.ok ? r.json() : Promise.reject(r.status)))
+      .then(club => {
+        if (club.name) document.getElementById('cc-name').textContent = club.name;
+        if (club.members_count) {
+          const n = club.members_count;
+          document.getElementById('cc-members').textContent = n + (n === 1 ? ' member' : ' members');
+        }
+      })
+      .catch(() => { /* keep the default text if Chess.com is unavailable */ });
+
+    fetch(api + '/members')
+      .then(r => (r.ok ? r.json() : Promise.reject(r.status)))
+      .then(data => {
+        const members = [...(data.weekly || []), ...(data.monthly || []), ...(data.all_time || [])];
+        if (!members.length) return;
+        const list = document.querySelector('#cc-member-list ul');
+        members.slice(0, 24).forEach(m => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = 'https://www.chess.com/member/' + encodeURIComponent(m.username);
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.textContent = m.username;
+          li.appendChild(a);
+          list.appendChild(li);
+        });
+        document.getElementById('cc-member-list').hidden = false;
+      })
+      .catch(() => { /* member list stays hidden */ });
+  }
+
   // ---------- 4) Join form ----------
   const form = document.getElementById('join-form');
   if (!form) return;
